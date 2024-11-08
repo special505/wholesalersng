@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import {IoShirtSharp} from "react-icons/io5";
-import {GiConverseShoe} from "react-icons/gi";
-import {GiCoconuts} from "react-icons/gi";
-import {IoIosCamera} from "react-icon/io";
+import { IoShirtSharp } from "react-icons/io5";
+import { GiConverseShoe } from "react-icons/gi";
+import { GiCoconuts } from "react-icons/gi";
+import { IoIosCamera } from "react-icons/io";
 
 export default function Home() {
   return (
@@ -13,19 +13,19 @@ export default function Home() {
                 <p className="border border-orange-500 p-3 rounded-lg text-center text-lg lg:text-2xl text-orange-900 mb-5">Hot Categories</p>
                 <div className="grid grid-cols-2 gap-3">
                     <blockquote className="h-28 flex flex-col justify-center items-center gap-3 bg-white p-3 rounded-lg">
-                        <IoShirtSharp className="text-4x1"/>
+                        <IoShirtSharp className="text-4xl"/>
                         <Link href="#">Cloths</Link>
                     </blockquote>
                     <blockquote className="h-28 flex flex-col justify-center items-center gap-3 bg-white p-3 rounded-lg">
-                    < GiConverseShoe className="text-4x1"/>
+                        <GiConverseShoe className="text-4xl"/>
                         <Link href="#">Footwears</Link>
                     </blockquote>
                     <blockquote className="h-28 flex flex-col justify-center items-center gap-3 bg-white p-3 rounded-lg">
-                    <GiCoconuts className="text-4x1"/>
+                        <GiCoconuts className="text-4xl"/>
                         <Link href="#">Raw Food</Link>
                     </blockquote>
                     <blockquote className="h-28 flex flex-col justify-center items-center gap-3 bg-white p-3 rounded-lg">
-                    <IoIosCamera className="text-4x1"/>
+                        <IoIosCamera className="text-4xl"/>
                         <Link href="#">Electronics</Link>
                     </blockquote>
                 </div>
