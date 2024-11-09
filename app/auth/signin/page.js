@@ -1,11 +1,18 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { TextField, Button } from "@mui/material";
 import { FcGoogle } from "react-icons/fc"
 import { BsTwitterX } from "react-icons/bs"
 import { auth,signIn,signOut } from "@/auth";
 
 export default async function Signin() {
-    const session = await auth ();
+    const session = await auth();
+
+     // <<<< USER AUTH CHECK >>>>
+     if (session?.user) {
+        redirect("/my")
+    }
+    // USER AUTH CHECK >>>>
 
     return (
         <main className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-0 my-6 md:my-8 lg:my-16">
@@ -37,7 +44,10 @@ export default async function Signin() {
                             <p>You are signed in as {session?.user.email}.</p>
                         <form action={async () =>{
                             "use server"
-                            await signOut()
+                            await signOut({
+                                redirect: true,
+                                redirectTo: "/my"
+                            })
                         }}>
                             <button type="submit">Sign out</button>
                         </form>
