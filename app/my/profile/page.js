@@ -7,7 +7,7 @@ export default async function Profile() {
     const session = await auth ();
 
     // <<<< USER AUTH CHECK >>>>
-    if (!session.user) {
+    if (!session?.user) {
         redirect("/auth/signin")
     }
     // USER AUTH CHECK >>>>
